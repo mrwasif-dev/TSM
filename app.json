@@ -1,6 +1,6 @@
 {
   "name": "TSM - Telegram SMM Bot",
-  "description": "Complete Telegram Bot for Social Media Marketing Services. Buy Instagram followers, YouTube views, TikTok likes and more directly from Telegram!",
+  "description": "Complete Telegram Bot for Social Media Marketing Services. Buy Instagram followers, YouTube views, TikTok likes and more!",
   "keywords": [
     "telegram",
     "bot",
@@ -25,6 +25,10 @@
       "description": "Comma-separated admin Telegram IDs (e.g., 123456789,987654321)",
       "required": true
     },
+    "DATABASE_URL": {
+      "description": "Database URL - Will be auto-filled by Heroku",
+      "required": false
+    },
     "JAZZCASH_NUMBER": {
       "description": "Your JazzCash account number for payments",
       "required": true,
@@ -43,7 +47,7 @@
     "UPSTREAM_API_KEY": {
       "description": "Your upstream SMM panel API key (optional)",
       "required": false,
-      "value": ""
+      "value": "your-api-key"
     },
     "CURRENCY": {
       "description": "Currency symbol (PKR, INR, USD, etc.)",
