@@ -6,46 +6,37 @@
     "bot",
     "smm",
     "panel",
-    "social-media",
-    "marketing",
-    "pakistan",
-    "jazzcash",
-    "easypaisa"
+    "social-media"
   ],
   "website": "https://github.com/mrwasif-dev/TSM",
   "repository": "https://github.com/mrwasif-dev/TSM",
-  "logo": "https://raw.githubusercontent.com/mrwasif-dev/TSM/main/logo.png",
   "env": {
     "BOT_TOKEN": {
       "description": "Your Telegram Bot Token from @BotFather",
       "required": true
     },
     "ADMIN_IDS": {
-      "description": "Comma-separated admin Telegram IDs (e.g., 123456789,987654321)",
+      "description": "Comma-separated admin Telegram IDs",
       "required": true
     },
     "JAZZCASH_NUMBER": {
-      "description": "Your JazzCash account number for payments",
-      "required": true,
-      "value": "03001234567"
+      "description": "Your JazzCash account number",
+      "required": true
     },
     "EASYPAISA_NUMBER": {
-      "description": "Your EasyPaisa account number for payments",
-      "required": true,
-      "value": "03001234567"
+      "description": "Your EasyPaisa account number",
+      "required": true
     },
     "UPSTREAM_API_URL": {
-      "description": "Your upstream SMM panel API URL (optional)",
-      "required": false,
-      "value": "https://api.example.com"
+      "description": "Upstream SMM panel API URL",
+      "required": false
     },
     "UPSTREAM_API_KEY": {
-      "description": "Your upstream SMM panel API key (optional)",
-      "required": false,
-      "value": "your-api-key"
+      "description": "Upstream SMM panel API key",
+      "required": false
     },
     "CURRENCY": {
-      "description": "Currency symbol (PKR, INR, USD, etc.)",
+      "description": "Currency symbol",
       "required": false,
       "value": "PKR"
     }
@@ -53,13 +44,11 @@
   "formation": {
     "worker": {
       "quantity": 1,
-      "size": "basic"  // 👈 Changed from "eco" to "basic"
+      "size": "basic"
     }
   },
   "addons": [
-    {
-      "plan": "heroku-postgresql:essential-0"
-    }
+    "heroku-postgresql:essential-0"
   ],
   "buildpacks": [
     {
