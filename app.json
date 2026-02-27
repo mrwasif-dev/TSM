@@ -1,23 +1,28 @@
 {
-  "name": "Telegram SMM Bot",
-  "description": "Complete Telegram Bot for Social Media Marketing Services",
+  "name": "TSM - Telegram SMM Bot",
+  "description": "Complete Telegram Bot for Social Media Marketing Services. Buy Instagram followers, YouTube views, TikTok likes and more directly from Telegram!",
   "keywords": [
     "telegram",
     "bot",
     "smm",
     "panel",
     "social-media",
-    "marketing"
+    "marketing",
+    "pakistan",
+    "jazzcash",
+    "easypaisa",
+    "python"
   ],
-  "website": "https://github.com/YOUR_USERNAME/telegram-smm-bot",
-  "repository": "https://github.com/YOUR_USERNAME/telegram-smm-bot",
+  "website": "https://github.com/mrwasif-dev/TSM",
+  "repository": "https://github.com/mrwasif-dev/TSM",
+  "logo": "https://raw.githubusercontent.com/mrwasif-dev/TSM/main/logo.png",
   "env": {
     "BOT_TOKEN": {
       "description": "Your Telegram Bot Token from @BotFather",
       "required": true
     },
     "ADMIN_IDS": {
-      "description": "Comma-separated Telegram User IDs of admins (e.g., 123456789,987654321)",
+      "description": "Comma-separated admin Telegram IDs (e.g., 123456789,987654321)",
       "required": true
     },
     "JAZZCASH_NUMBER": {
@@ -39,6 +44,11 @@
       "description": "Your upstream SMM panel API key (optional)",
       "required": false,
       "value": ""
+    },
+    "CURRENCY": {
+      "description": "Currency symbol (PKR, INR, USD, etc.)",
+      "required": false,
+      "value": "PKR"
     }
   },
   "formation": {
