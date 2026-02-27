@@ -1,6 +1,6 @@
 {
   "name": "TSM - Telegram SMM Bot",
-  "description": "Complete Telegram Bot for Social Media Marketing Services. Buy Instagram followers, YouTube views, TikTok likes and more!",
+  "description": "Complete Telegram Bot for Social Media Marketing Services",
   "keywords": [
     "telegram",
     "bot",
@@ -10,8 +10,7 @@
     "marketing",
     "pakistan",
     "jazzcash",
-    "easypaisa",
-    "python"
+    "easypaisa"
   ],
   "website": "https://github.com/mrwasif-dev/TSM",
   "repository": "https://github.com/mrwasif-dev/TSM",
@@ -24,10 +23,6 @@
     "ADMIN_IDS": {
       "description": "Comma-separated admin Telegram IDs (e.g., 123456789,987654321)",
       "required": true
-    },
-    "DATABASE_URL": {
-      "description": "Database URL - Will be auto-filled by Heroku",
-      "required": false
     },
     "JAZZCASH_NUMBER": {
       "description": "Your JazzCash account number for payments",
@@ -58,7 +53,7 @@
   "formation": {
     "worker": {
       "quantity": 1,
-      "size": "eco"
+      "size": "basic"  // 👈 Changed from "eco" to "basic"
     }
   },
   "addons": [
@@ -70,18 +65,5 @@
     {
       "url": "heroku/python"
     }
-  ],
-  "environments": {
-    "test": {
-      "formation": {
-        "worker": {
-          "quantity": 1,
-          "size": "eco"
-        }
-      },
-      "addons": [
-        "heroku-postgresql:essential-0"
-      ]
-    }
-  }
+  ]
 }
