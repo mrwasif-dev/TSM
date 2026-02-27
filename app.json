@@ -1,0 +1,73 @@
+{
+  "name": "Telegram SMM Bot",
+  "description": "Complete Telegram Bot for Social Media Marketing Services",
+  "keywords": [
+    "telegram",
+    "bot",
+    "smm",
+    "panel",
+    "social-media",
+    "marketing"
+  ],
+  "website": "https://github.com/YOUR_USERNAME/telegram-smm-bot",
+  "repository": "https://github.com/YOUR_USERNAME/telegram-smm-bot",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token from @BotFather",
+      "required": true
+    },
+    "ADMIN_IDS": {
+      "description": "Comma-separated Telegram User IDs of admins (e.g., 123456789,987654321)",
+      "required": true
+    },
+    "JAZZCASH_NUMBER": {
+      "description": "Your JazzCash account number for payments",
+      "required": true,
+      "value": "03001234567"
+    },
+    "EASYPAISA_NUMBER": {
+      "description": "Your EasyPaisa account number for payments",
+      "required": true,
+      "value": "03001234567"
+    },
+    "UPSTREAM_API_URL": {
+      "description": "Your upstream SMM panel API URL (optional)",
+      "required": false,
+      "value": "https://api.example.com"
+    },
+    "UPSTREAM_API_KEY": {
+      "description": "Your upstream SMM panel API key (optional)",
+      "required": false,
+      "value": ""
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:essential-0"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "environments": {
+    "test": {
+      "formation": {
+        "worker": {
+          "quantity": 1,
+          "size": "eco"
+        }
+      },
+      "addons": [
+        "heroku-postgresql:essential-0"
+      ]
+    }
+  }
+}
